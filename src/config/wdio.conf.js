@@ -28,7 +28,7 @@ exports.config = {
     // will be called from there.
     //
     specs: [
-        './test/specs/**/*.js'
+        './../tests/*.tests.js'
     ],
     // Patterns to exclude.
     exclude: [
@@ -140,17 +140,17 @@ exports.config = {
     // The only one supported by default is 'dot'
     // see also: https://webdriver.io/docs/dot-reporter
     reporters: ["spec",
-		   [
-		   "junit",
-		   {
-			   outputDir: "./report",
-			   outputFileFormat: function (options) {
-				   return `results-${options.cid}.xml`;
-				   },
-				},
-			],
+		//    [
+		//    "junit",
+		//    {
+		// 	   outputDir: "./report",
+		// 	   outputFileFormat: function (options) {
+		// 		   return `results-${options.cid}.xml`;
+		// 		   },
+		// 		},
+		// 	],
             ['allure', {
-                outputDir: 'allure-results',
+                outputDir: './artifacts/allure-results',
                 disableWebdriverStepsReporting: true,
                 disableWebdriverScreenshotsReporting: true,
                 }
@@ -267,7 +267,7 @@ exports.config = {
             console.log(`Screenshot for the failed test ${test.title} is saved`);
 
             const filename = test.title + '.png';
-            const dirPath = './screenshots/';
+            const dirPath = './artifacts/screenshots/';
 
             if (!existsSync(dirPath)) {
                 mkdirSync(dirPath, {

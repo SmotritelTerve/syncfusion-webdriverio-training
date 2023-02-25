@@ -1,11 +1,11 @@
 {
   "name": "webdriverio-training",
   "version": "1.0.0",
-  "description": "",
+  "description": "pom with wdio",
+  "private": true,
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "wdio": "wdio run ./wdio.conf.js"
+    "test": "wdio run src/config/wdio.conf.js"
   },
   "keywords": [],
   "author": "",
