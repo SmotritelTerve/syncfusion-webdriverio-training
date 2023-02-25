@@ -1,12 +1,10 @@
-const BaseComponent = require("./base.component");
-
-class SideMenuComponent extends BaseComponent {
-    constructor() {
-        super("#plannerSiderBar");
+class SideMenuComponent{
+    get rootEl(){
+        return $('#plannerSiderBar');
     }
 
     get name( ){
-        return this.rootEl.$("p.name");
+        return this.rootEl.$(".name");
     }
 
     /**
@@ -18,7 +16,7 @@ class SideMenuComponent extends BaseComponent {
             schedule: '[routerlink="/calendar"]',
             doctors: '[routerlink="/doctors"]',
         };
-        return this.rootEL.$(selectors[name.toLowerCase()]);
+        return this.rootEl.$(selectors[name.toLowerCase()]);
     }
 }
 

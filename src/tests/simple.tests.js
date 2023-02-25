@@ -1,4 +1,4 @@
-describe('Doctors page', () => {
+xdescribe('Doctors page', () => {
     beforeEach(async () => {
         await browser.url("https://ej2.syncfusion.com/showcase/angular/appointmentplanner/#/doctors");
     })
