@@ -1,4 +1,4 @@
-describe("Module 5: Advanced examples", () => {
+describe("Module 4: Advanced examples", () => {
     beforeEach(async () => {
         await browser.url("/showcase/angular/appoinmentplanner/#/doctors");
     });

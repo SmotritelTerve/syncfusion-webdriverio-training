@@ -2,10 +2,10 @@ const DashboardPage = require("./dashboard.page");
 const DoctorsPage = require("./doctors.page");
 
 /**
- * @param name {'dashboard' | 'doctor'}
+ * @param name {'dashboard' | 'doctors'}
  * @returns {DashboardPage|DoctorsPage}
  */
-function page(name){
+function pages(name){
     const items = {
         dashboard: new DashboardPage(),
         doctors: new DoctorsPage(),
@@ -16,5 +16,5 @@ function page(name){
 module.exports = {
     DashboardPage,
     DoctorsPage,
-    page,
+    pages,
 };
