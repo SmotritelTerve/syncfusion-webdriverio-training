@@ -37,4 +37,11 @@ describe("Doctors Page Test Suite", () => {
             ignoreCase:true,
         });
     });
+
+    it("should close modal", async () => {
+        await page("dashboard").sideMenu.item("doctors").click();
+        await page("doctors").doctorListHeader.addNewDoctorBtn.click();
+        await page("doctors").addDoctorModal.closeBtn.click();
+        await expect(page("doctors").addDoctorModal.rootEl).not.toBeDisplayed();
+    })
 })
