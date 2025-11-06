@@ -2,14 +2,19 @@
 
 Make use of https://ej2.syncfusion.com/ to learn WebdriverIO
 
-## Run tests
+# Run tests
 
 To run all tests execute in terminal
 
-```bash
+```
 npm run test
+
 ```
 
-## License
+# Install a specific version of chromedriver
+
+npm install chromedriver@140 --save-dev
+
+# License
 
 [MIT](https://choosealicense.com/licenses/mit/)
